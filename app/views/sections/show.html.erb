@@ -1,0 +1,52 @@
+<h><strong> This shows the details of Sections </strong></h>
+
+<p>
+  <strong>Number:</strong>
+  <%= @section.number %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @section.term %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @section.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @section.end_time %>
+</p>
+
+<p>
+  <strong>Max students:</strong>
+  <%= @section.max_students %>
+</p>
+
+<p>
+  <strong>Enrolled students:</strong>
+  <%= @section.enrolled_students %>
+</p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @section.room %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @section.course.title %>
+</p>
+
+<p>
+  <strong>Professor:</strong>
+  <%= @section.professor.name %>
+</p>
+
+<%= link_to 'Edit', edit_section_path(@section) %> |
+<%= link_to 'Back', sections_path %>
+
+
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %>

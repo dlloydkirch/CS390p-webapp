@@ -1,0 +1,38 @@
+<h><strong> This shows the details of Professors </strong></h>
+
+<p>
+  <strong>Name:</strong>
+  <%= @professor.name %>
+</p>
+
+<p>
+  <strong>Id number:</strong>
+  <%= @professor.id_number %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @professor.department %>
+</p>
+
+<p>
+  <strong>Office:</strong>
+  <%= @professor.office %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @professor.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @professor.email %>
+</p>
+
+<%= link_to 'Edit', edit_professor_path(@professor) %> |
+<%= link_to 'Back', professors_path %>
+
+
+
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %>

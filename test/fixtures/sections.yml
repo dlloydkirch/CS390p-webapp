@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  term: MyString
+  start_time: MyString
+  end_time: MyString
+  max_students: 1
+  enrolled_students: 1
+  room: MyString
+  course: one
+  professor: one
+
+two:
+  number: MyString
+  term: MyString
+  start_time: MyString
+  end_time: MyString
+  max_students: 1
+  enrolled_students: 1
+  room: MyString
+  course: two
+  professor: two

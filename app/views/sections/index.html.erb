@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sections</h1>
+
+
+<%= form_tag(search_sections_url, method: "get") do %>
+    <%= label_tag(:q, "Search for section by number:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag ("Search") %>
+<% end %>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Term</th>
+      <th>Start time</th>
+      <th>End time</th>
+      <th>Max students</th>
+      <th>Enrolled students</th>
+      <th>Room</th>
+      <th>Course</th>
+      <th>Professor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sections.each do |section| %>
+      <tr>
+        <td><%= section.number %></td>
+        <td><%= section.term %></td>
+        <td><%= section.start_time %></td>
+        <td><%= section.end_time %></td>
+        <td><%= section.max_students %></td>
+        <td><%= section.enrolled_students %></td>
+        <td><%= section.room %></td>
+        <td><%= section.course.title %></td>
+        <td><%= section.professor.name %></td>
+        <td><%= link_to 'Show', section %></td>
+        <td><%= link_to 'Edit', edit_section_path(section) %></td>
+        <td><%= link_to 'Destroy', section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Section', new_section_path %>
+
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %>

@@ -1,0 +1,9 @@
+<h1>Editing Section</h1>
+
+<%= render 'form', section: @section %>
+
+<%= link_to 'Show', @section %> |
+<%= link_to 'Back', sections_path %>
+
+
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
