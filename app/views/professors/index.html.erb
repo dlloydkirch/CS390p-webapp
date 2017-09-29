@@ -7,6 +7,7 @@
     <%= label_tag(:q, "Search for professor by name :") %>
     <%= text_field_tag(:q) %>
     <%= submit_tag ("Search") %>
+
 <% end %>
 <br>
 
@@ -44,6 +45,6 @@
 <br>
 
 <%= link_to 'New Professor', new_professor_path %>
-
-
+<br>
+<br>
 <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
