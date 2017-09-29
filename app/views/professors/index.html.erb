@@ -4,10 +4,9 @@
 
 
 <%= form_tag(search_professors_url, method: "get") do %>
-    <%= label_tag(:q, "Search for professor by name :") %>
+    <%= label_tag(:q, "Search for professor by name :")%>
     <%= text_field_tag(:q) %>
     <%= submit_tag ("Search") %>
-
 <% end %>
 <br>
 

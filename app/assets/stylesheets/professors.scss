@@ -1,12 +1,12 @@
 // Place all the styles related to the Professors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html body {background:sandybrown;}//background
 html body {color:purple} //color of text in the table
-html h1{color: dodgerblue;}
-html a:link{color: black;}
-html a:visited {color: deeppink;}
-html tbody{color: lightpink;  }
-html form{color:black;}
-html p { font-family: "Times New Roman", Times, serif;}
+html h1{color: darkblue;}//header
+html a:link{color: black;}//unvisited link
+html a:visited {color: deeppink;}//visited link
+html tbody{color: black;}//color for headers in body table
+html form{color:darkred;}//color for search/login information
+html p { font-family: "Times New Roman", Times, serif;}//font
 html p {color: darkred;}
-html body {background:darkcyan;}
