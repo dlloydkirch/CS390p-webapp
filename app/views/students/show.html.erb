@@ -33,10 +33,20 @@
 
 <p>
   <strong>Professors:</strong>
+  <br>
+  <% Professor.all.each do |professor| %>
+      <%= professor.name %>
+      <br>
+  <% end %>
 </p>
 
 <p>
   <strong>Sections:</strong>
+  <br>
+  <% Section.all.each do |section| %>
+    <%= section.number %>
+      <br>
+  <% end %>
 </p>
 
 
