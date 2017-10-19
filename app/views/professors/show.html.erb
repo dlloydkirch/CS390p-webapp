@@ -33,10 +33,22 @@
 
 <p>
   <strong>Sections:</strong>
+  <br>
+  <% Section.all.each do |section| %>
+      <%= section.number %>
+      <br>
+  <% end %>
+</p>
+
 <p>
   <strong>Students:</strong>
+  <br>
+  <% Student.all.each do |student| %>
+      <%= student.name %>
+      <br>
+  <% end %>
 </p>
-</p>
+
 
 
 <%= link_to 'Edit', edit_professor_path(@professor) %> |
