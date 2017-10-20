@@ -43,11 +43,11 @@
 <p>
   <strong>Sections:</strong>
   <br>
-  <% Section.all.each do |section| %>
-    <%= section.number %>
-    <%= section.course.title %>
-    <%= section.professor.name %>
-    <br>
+  <% Enrollment.all.each do |enrollment| %>
+      <% if enrollment.student.name == @student.name %>
+          <%= enrollment.section.number %>
+          <br>
+      <% end %>
   <% end %>
 </p>
 
@@ -57,3 +57,8 @@
 
 <%= link_to 'Edit', edit_student_path(@student) %> |
 <%= link_to 'Back', students_path %>
+
+
+<br>
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+

@@ -32,46 +32,28 @@
 </p>
 
 <p>
-  <strong>Sections:</strong>
+  <strong>Sections (with students listed underneath each section):</strong>
   <br>
   <% Section.all.each do |section| %>
+
       <% if section.professor.name == @professor.name %>
+          <span style = "text-decoration:underline"><%= section.number %> <%=section.course.title %></span>
+          <br>
           <% Enrollment.all.each do |enrollment| %>
               <% if enrollment.section.number == section.number %>
-                 <%= section.number %>
-                  <%= section.course.title %>
-
-                  <%= enrollment.section.number %>
                  <%= enrollment.student.name %>
+                  <br>
               <% end %>
-              <br>
           <% end %>
-          <br>
+        <br>
       <% end %>
-      <br>
   <% end %>
 </p>
 
-<p>
-  <strong>Students:</strong>
-  <br>
-  <% Student.all.each do |student| %>
-      <%= student.name %> ----
-      <% end %>
-  ----
-  <br>
-  ----
-  <% Enrollment.all.each do |enrollment| %>
-      <%= enrollment.section.number %> ----
-      <%= enrollment.student.name %> ----
-      <br>
-  <% end %>
-  <br>
-</p>
 
 <%= link_to 'Edit', edit_professor_path(@professor) %> |
 <%= link_to 'Back', professors_path %>
 
-
+<br>
 
 <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
