@@ -5,23 +5,24 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style>
+    ul  {list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: darkorange;}
+    li {float: left;}
+    li a {display: block; text-aligh: center; padding: 14px 16px; text-decoration: none;}
+    li a:hover {background-color: darkslategrey}
+    </style>
   </head>
 
   <body>
-
   <p>
     <ul>
-      <a href="professors">Professors</a>
-      <a href="courses">Courses</a>
-      <a href="sections">Sections</a>
-      <a href="students">Students</a>
-      <a href="enrollments">Enrollments</a>
+      <li><a href="professors">Professors</a></li>
+      <li><a href="courses">Courses</a></li>
+      <li> <a href="sections">Sections</a></li>
+      <li> <a href="students">Students</a></li>
+      <li> <a href="enrollments">Enrollments</a></li>
     </ul>
-
-
-
   </p>
-
 
   <p class="navbar-text pull-right">
     <% if user_signed_in? %>
@@ -43,10 +44,4 @@
     <%= yield %>
   </body>
 
-
-
-
-
 </html>
-
-
