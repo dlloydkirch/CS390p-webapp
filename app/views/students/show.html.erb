@@ -32,21 +32,18 @@
 
 
 <p>
-  <strong>Professors:</strong>
-  <br>
-  <% Professor.all.each do |professor| %>
-    <%= professor.name %>
-    <br>
-  <% end %>
-</p>
 
 <p>
-  <strong>Sections:</strong>
+  <strong>Sections and Professors:</strong>
   <br>
   <% Enrollment.all.each do |enrollment| %>
       <% if enrollment.student.name == @student.name %>
-          <%= enrollment.section.number %>
-          <br>
+          <% Section.all.each do |section|%>
+              <% if section.number == enrollment.section.number %>
+                  <%= enrollment.section.number %> <%= section.professor.name %>
+                  <br>
+              <% end %>
+          <% end %>
       <% end %>
   <% end %>
 </p>
