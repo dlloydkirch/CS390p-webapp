@@ -21,6 +21,10 @@ class EnrollmentsController < ApplicationController
   def edit
   end
 
+
+  def search
+  end
+
   # POST /enrollments
   # POST /enrollments.json
   def create

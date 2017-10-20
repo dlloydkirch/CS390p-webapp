@@ -2,6 +2,13 @@
 
 <h1>Students</h1>
 
+<%= form_tag(search_students_url, method: "get") do %>
+    <%= label_tag(:q, "Search for students by name:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag ("Search") %>
+<% end %>
+<br>
+
 <table>
   <thead>
     <tr>
@@ -31,7 +38,18 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Student', new_student_path %>
+<br>
+<%= link_to 'Sections', sections_path %>
+<br>
+<%= link_to 'Professors', professors_path %>
+<br>
+<%= link_to 'Enrollments', enrollments_path %>
+<br>
+<%= link_to 'Courses', courses_path %>
+<br>
+<%= link_to 'Students', students_path %>
+<br>
+<br>
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %><

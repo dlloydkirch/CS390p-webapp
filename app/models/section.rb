@@ -1,7 +1,7 @@
 class Section < ApplicationRecord
   belongs_to :course
   belongs_to :professor
-  has_many :enrollment
+  has_many :student, through: :enrollment
 
 
   validates :number, :max_students, :enrolled_students, :room, presence: true

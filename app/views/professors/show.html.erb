@@ -35,7 +35,19 @@
   <strong>Sections:</strong>
   <br>
   <% Section.all.each do |section| %>
-      <%= section.number %>
+      <% if section.professor.name == @professor.name %>
+          <% Enrollment.all.each do |enrollment| %>
+              <% if enrollment.section.number == section.number %>
+                 <%= section.number %>
+                  <%= section.course.title %>
+
+                  <%= enrollment.section.number %>
+                 <%= enrollment.student.name %>
+              <% end %>
+              <br>
+          <% end %>
+          <br>
+      <% end %>
       <br>
   <% end %>
 </p>
@@ -44,12 +56,18 @@
   <strong>Students:</strong>
   <br>
   <% Student.all.each do |student| %>
-      <%= student.name %>
+      <%= student.name %> ----
+      <% end %>
+  ----
+  <br>
+  ----
+  <% Enrollment.all.each do |enrollment| %>
+      <%= enrollment.section.number %> ----
+      <%= enrollment.student.name %> ----
       <br>
   <% end %>
+  <br>
 </p>
-
-
 
 <%= link_to 'Edit', edit_professor_path(@professor) %> |
 <%= link_to 'Back', professors_path %>
