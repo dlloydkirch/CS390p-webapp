@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <title>Webapp</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+  <p>
+    <ul>
+      <a href="professors">Professors</a>
+      <a href="courses">Courses</a>
+      <a href="sections">Sections</a>
+      <a href="students">Students</a>
+      <a href="enrollments">Enrollments</a>
+    </ul>
+
+
+
+  </p>
+
 
   <p class="navbar-text pull-right">
     <% if user_signed_in? %>
@@ -27,6 +39,14 @@
     <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
     <% end %>
+
     <%= yield %>
   </body>
+
+
+
+
+
 </html>
+
+
